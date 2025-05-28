@@ -60,7 +60,7 @@
         kakko: kakko {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_1 &kp LS(N8) &kp LS(N9)>;
+            bindings = <&kp LANGUAGE_1 &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS>;
             label = "KAKKO";
         };
 
