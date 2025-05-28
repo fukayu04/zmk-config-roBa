@@ -49,6 +49,13 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        emoji: emoji {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "EMOJI";
+        };
     };
 
     behaviors {
@@ -67,31 +74,35 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                      &kp T                                                        &kp Y            &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                      &kp G               &kp LS(LG(S))               &kp F10      &kp H            &kp J  &kp K      &kp L    &kp COLON
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                      &kp B               &kp BACKSPACE               &kp UNDER    &kp N            &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LEFT_ALT  &lt 2 LEFT_COMMAND  &lt_to_layer_0 3 SPACE      &lt 1 ENTER  &lt 1 BACKSPACE                             &kp INT_KANA
+&kp Q             &kp W         &kp E         &kp R                      &kp T                                                        &kp Y            &kp U    &lt 5 I    &kp O    &kp P
+&kp A             &kp S         &kp D         &lt 2 F                    &kp G               &kp LG(LC(SPACE))           &kp F10      &kp H            &lt 2 J  &kp K      &kp L    &kp COLON
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                      &kp B               &kp BACKSPACE               &kp UNDER    &kp N            &kp M    &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LEFT_ALT  &lt 2 LEFT_COMMAND  &lt_to_layer_0 3 SPACE      &lt 1 ENTER  &lt 1 BACKSPACE                               &kp INT_KANA
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_ZOOM_OUT C_AC_ZOOM_IN>;
+            sensor-bindings = <&inc_dec_kp LC(MINUS) LC(PLUS)>;
         };
 
-        FUNCTION {
+        FnNum {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
+&trans  &trans  &trans  &trans  &trans                           &kp RS(NUMBER_6)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp F5
+&trans  &trans  &trans  &trans  &trans  &trans      &kp TILDE    &kp F6            &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp F10
+&trans  &trans  &trans  &trans  &trans  &trans      &kp INT_YEN  &trans            &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+&trans  &trans  &trans  &trans  &trans  &trans      &kp MINUS    &kp RS(NUMBER_1)                                            &kp RS(SLASH)
             >;
+
+            sensor-bindings = <&inc_dec_kp LG(F2) LG(F1)>;
         };
 
-        NUM {
+        ARROW {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp PIPE
+&kp MINUS                               &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp CARET         &kp AMPERSAND      &kp UP_ARROW    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp TAB                                 &kp LG(LS(Z))    &kp LG(Z)        &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp LEFT_ARROW  &kp RIGHT_ARROW       &kp PERCENT
+&mt LEFT_SHIFT LG(LA(LS(KP_NUMBER_0)))  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOWN_ARROW  &kp RIGHT_BRACE       &kp BACKSLASH
+&trans                                  &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp LG(LANG1)
             >;
+
+            sensor-bindings = <&inc_dec_kp LG(F12) LG(F11)>;
         };
 
         ARROW {
