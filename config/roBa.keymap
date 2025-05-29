@@ -111,10 +111,10 @@
 
         FnNum {
             bindings = <
-&trans  &trans      &trans  &trans  &trans                                                &kp AMPERSAND  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
-&kakko  &kagikakko  &trans  &trans  &trans  &trans                        &kp TILDE       &kp INT_YEN    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
-&trans  &trans      &trans  &trans  &trans  &kp LG(LS(LC(NUMBER_4)))      &kp UNDERSCORE  &attomark      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&trans  &trans      &trans  &trans  &trans  &kp SPACE                     &kp MINUS       &kp EXCL                                                 &kp QUESTION
+&kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp HASH      &kp DOLLAR  &kp PERCENT                                                &kp AMPERSAND  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
+&kakko            &kagikakko         &kp PLUS      &kp MINUS   &kp EQUAL    &trans                        &kp TILDE       &kp INT_YEN    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
+&trans            &trans             &kp ASTERISK  &kp SLASH   &trans       &kp LG(LS(LC(NUMBER_4)))      &kp UNDERSCORE  &attomark      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+&trans            &trans             &trans        &trans      &trans       &kp SPACE                     &kp MINUS       &kp EXCL                                                 &kp QUESTION
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -133,8 +133,8 @@
 
         MouseScroll {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                            &trans     &kp RS(RC(TAB))  &trans  &kp RC(TAB)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans         &trans     &trans     &mkp MB1         &trans  &mkp MB2     &trans
+&trans  &trans  &trans  &trans  &trans                            &trans     &trans           &trans  &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans         &trans     &trans     &kp RC(RS(TAB))  &trans  &kp RC(TAB)  &trans
 &trans  &trans  &trans  &trans  &trans  &trans         &trans     &trans     &trans           &trans  &trans       &trans
 &trans  &trans  &trans  &trans  &trans  &kp LG(F)      &kp RG(T)  &kp RG(W)                                        &kp RG(RS(T))
             >;
