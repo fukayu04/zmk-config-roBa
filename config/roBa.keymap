@@ -45,6 +45,11 @@
             bindings = <&mkp MB2>;
             key-positions = <19 20>;
         };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <1 0>;
+        };
     };
 
     macros {
@@ -130,7 +135,7 @@
         ARROW {
             bindings = <
 &kp ESCAPE                              &kp F2         &trans     &kp F4           &trans                                                     &trans         &trans  &kp UP_ARROW    &trans           &trans
-&kp TAB                                 &kp LG(LS(Z))  &kp LG(Z)  &kp KP_NUMBER_6  &trans     &kp LC(LA(KP_NUMBER_0))      &kp RC(J)          &trans         &trans  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp SEMICOLON
+&kp TAB                                 &kp LG(LS(Z))  &kp LG(Z)  &kp KP_NUMBER_6  &trans     &kp LC(LA(KP_NUMBER_0))      &kp RC(J)          &trans         &trans  &kp LEFT_ARROW  &kp RIGHT_ARROW  &mt RIGHT_SHIFT SEMICOLON
 &mt LEFT_SHIFT LG(LA(LS(KP_NUMBER_0)))  &trans         &trans     &trans           &trans     &trans                       &trans             &trans         &trans  &kp DOWN_ARROW  &trans           &nakaguro
 &trans                                  &trans         &trans     &kp LEFT_ALT     &kp ENTER  &kp SPACE                    &kp RIGHT_COMMAND  &kp BACKSPACE                                           &mt RIGHT_SHIFT LANGUAGE_2
             >;
