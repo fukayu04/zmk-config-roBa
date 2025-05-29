@@ -23,11 +23,6 @@
 
         shift_tab {
             bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
             key-positions = <11 10>;
         };
 
@@ -39,6 +34,16 @@
         eq {
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
+        };
+
+        Click {
+            bindings = <&mkp MB1>;
+            key-positions = <18 19>;
+        };
+
+        Click2 {
+            bindings = <&mkp MB2>;
+            key-positions = <19 20>;
         };
     };
 
