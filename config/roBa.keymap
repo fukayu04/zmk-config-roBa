@@ -118,7 +118,7 @@
 &trans                  &trans  &trans   &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 1 SPACE            &lt 1 ENTER  &mt RSHIFT BACKSPACE                               &mt RIGHT_SHIFT LANGUAGE_1
             >;
 
-            sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;
+            sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
         };
 
         FnNum {
@@ -129,7 +129,7 @@
 &trans            &trans             &trans        &trans      &arrowright  &kp SPACE                     &kp MINUS       &kp EXCL                                                 &kp QUESTION
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         ARROW {
@@ -140,7 +140,7 @@
 &trans                                  &trans         &trans     &kp LEFT_ALT     &kp ENTER  &kp SPACE                    &kp RIGHT_COMMAND  &kp BACKSPACE                                           &mt RIGHT_SHIFT LANGUAGE_2
             >;
 
-            sensor-bindings = <&inc_dec_kp LG(F12) LG(F11)>;
+            sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
         };
 
         MouseScroll {
